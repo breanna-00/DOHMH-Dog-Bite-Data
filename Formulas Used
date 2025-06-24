@@ -1,0 +1,25 @@
+=IF(D3=1,"Only One",IF(B3=C3,"Even",IF(B3>C3,"More Not SpayNeuter","More Yes SpayNeuter")))
+
+=IF(AND(E3<>"Only One", E3<>"Even"), 
+    IF(E3="More Not SpayNeuter", 
+        IF(B3-C3<=5, "Less or Equal to 5", 
+            IF(B3-C3<=10, "Less or Equal to 10", 
+                "Greater than 10")
+        ), 
+        ""
+    ), 
+    ""
+)
+
+=IF(AND(E4<>"Only One", E4<>"Even"), 
+    IF(E4="More Yes SpayNeuter", 
+        IF(D4-C4<=5, "Less or Equal to 5", 
+            IF(D4-C4<=10, "Less or Equal to 10", 
+                "Greater than 10")
+        ), 
+        ""
+    ), 
+    ""
+)
+
+=IF(E8="Only One",IF(B8>0,"More Not SpayNeuter","More Yes SpayNueter"),"")
